@@ -79,7 +79,7 @@ class ApiRenderer extends BaseApiRenderer implements ViewContextInterface
             }
             $this->_view->assetManager = new AssetManager([
                 'basePath' => $assetPath,
-                'baseUrl' => './assets',
+                'baseUrl' => '/docs/assets',
             ]);
         }
 

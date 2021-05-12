@@ -53,7 +53,7 @@ class GuideController extends BaseController
             $renderer->pageTitle = $this->pageTitle;
         }
         if ($renderer->guideUrl === null) {
-            $renderer->guideUrl = './';
+            $renderer->guideUrl = '/docs/';
         }
         $renderer->guidePrefix = $this->guidePrefix;
 
@@ -71,7 +71,7 @@ class GuideController extends BaseController
             }
         } elseif (file_exists($targetDir . '/cache/apidoc.data')) {
             if ($renderer->apiUrl === null) {
-                $renderer->apiUrl = './';
+                $renderer->apiUrl = '/docs/';
             }
             $renderer->apiContext = $this->loadContext($targetDir);
         } else {

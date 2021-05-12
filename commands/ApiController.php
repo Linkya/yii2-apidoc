@@ -47,7 +47,7 @@ class ApiController extends BaseController
             return 1;
         }
 
-        $renderer->apiUrl = './';
+        $renderer->apiUrl = '/docs/';
         $renderer->guidePrefix = $this->guidePrefix;
 
         if ($this->pageTitle !== null) {
@@ -58,7 +58,7 @@ class ApiController extends BaseController
         if ($this->guide !== null) {
             $renderer->guideUrl = $guideUrl = $this->guide;
         } else {
-            $guideUrl = './';
+            $guideUrl = '/docs/';
             $renderer->guideUrl = $targetDir;
             if (file_exists($renderer->generateGuideUrl('README.md'))) {
                 $renderer->guideUrl = $guideUrl;
